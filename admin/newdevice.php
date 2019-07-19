@@ -246,9 +246,7 @@
          </div>
 	  </div>
  </div>
-</form>
  <div class="control-group">
-   <form action="" method="post" id="filter-form">
      <SELECT name="bulan">
        <option value="01"> Januari</option>
        <option value="02"> Februari</option>
@@ -274,7 +272,6 @@
        ?>
      </select>
      <input class="btn btn-success" type="submit" name="btn-filter" id="btn-filter" value="Filter">
-   </form>
  </div>
 </div>
   	<table cellpadding="0" cellspacing="0" border="0" class="table" id="example">
@@ -325,7 +322,7 @@
 
 </tbody>
 </table>
-
+</form>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#btn-filter').click(function(e) {
@@ -333,7 +330,7 @@
       $.ajax({
         method: "post",
         url: "filter_barang_masuk.php",
-        data: $('#filter-form').serialize(),
+        data: $('#send').serialize(),
         success: function(response) {
           $('#example').html(response);
         }

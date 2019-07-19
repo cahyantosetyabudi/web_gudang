@@ -2,8 +2,8 @@
 //core
 function dbcon(){
 	$user = "root";
-	$pass = "root";
-	$host = "localhost:8889";
+	$pass = "";
+	$host = "localhost";
 	$db = "thesis";
 	mysql_connect($host,$user,$pass);
 	mysql_select_db($db);
